@@ -9,15 +9,15 @@ if __name__ == '__main__':
         'costs':   ' '.join(map(str, [1, 1, 1, 1, 0.25])),
         'observations': ' '.join(map(str, list(range(7*7)))),
         'observation_probability': 0.85, # the probability of O_s = S_s, i.e., an accurate observation 
-        'init_state': '24',
+        'init_state': '5',
         'board': [ # also defines the immediate reward map
-            [-1, -1, 10, 10, -1, -1, -1],
-            [-1, -1, -1, 10,  1, -1, -1],
             [-1, -1, -1, -1, -1, -1, -1],
             [-1, -1, -1, -1, -1, -1, -1],
-            [20, -1, -1, -1, -1, -1, -1],
-            [20, -1, -1, -1, -1, -1, 40],
-            [-1, -1, -1, -1, -1, 40, 40]
+            [-1, -1, -1, -1, -1, -1, -1],
+            [-100, -100, -100, -1, -1, -100, -100],
+            [-1, -1, -1, -1, -1, -1, -1],
+            [-1, -1, -1, -1, -1, 40, 40],
+            [-1, -1, -100, -1, -1, 40, 40]
         ],
         'action_map': lambda action, i,j : {
             'up': (i - 1, j),

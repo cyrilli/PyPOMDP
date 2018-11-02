@@ -57,7 +57,7 @@ class GridWorldMaker():
 
                         lines.append(template.format(a=action, si=self.board.state(i, j), r=reward))
                 except IndexError:
-                    lines.append(template.format(a=action, si=self.board.state(i, j), r=-10))
+                    lines.append(template.format(a=action, si=self.board.state(i, j), r=-100))
             return wrapper
         
         template = 'R: {a} : {si} : *  : *       {r}\n'

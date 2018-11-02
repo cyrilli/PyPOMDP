@@ -88,14 +88,17 @@ class PomdpRunner:
             # print ino
             log.info('\n'.join([
               'Taking action: {}'.format(action),
-              'Observation: {}'.format(obs),
+              #'Observation: {}'.format(obs),
+              'Observation: {} {}'.format(str(int(int(obs)/7)), str(int(obs)%7)),
               'Reward: {}'.format(reward),
               'Budget: {}'.format(budget),
-              'New state: {}'.format(new_state),
+              #'New state: {}'.format(new_state),
+              'New state: {} {}'.format(str(int(int(new_state)/7)), str(int(new_state)%7)),
               'New Belief: {}'.format(belief),
               '=' * 20
             ]))
 
+    
             if budget <= 0:
                 log.info('Budget spent.')
 
